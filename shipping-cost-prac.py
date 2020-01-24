@@ -1,6 +1,6 @@
 ## will calculate shipping cost and suggest the cheapest option
 #enter weight of package
-weight = 40
+weight =21
 #calculate ground shipping cost
 def ground_shipping_cost(weight):
   if weight <= 2:
@@ -30,10 +30,13 @@ premium_ground_shipping = 125
 #calculate cheapest option and return
 def best_shipping_option(ground_shipping, drone_shipping, premium_ground_shipping):
   if ground_shipping<drone_shipping and ground_shipping<premium_ground_shipping:
-    return print("Your cheapest option would be ground shipping for " + str(ground_shipping) + " dollars.")
+    print("Your cheapest option would be ground shipping for " + str(ground_shipping) + " dollars.")
+    print("Your other options are drone ship for "+str(drone_shipping)+" dollars and premium ground ship for "+str(premium_ground_shipping)+" dollars.")
   if drone_shipping<ground_shipping and drone_shipping<premium_ground_shipping:
-    return print("Your cheapest option would be drone shipping for " + str(drone_shipping) + " dollars.")
+    print("Your cheapest option would be drone shipping for " + str(drone_shipping) + " dollars.")
+    print("Your other options are ground ship for "+str(ground_shipping)+" dollars and premium ground ship for "+str(premium_ground_shipping)+" dollars.")
   if premium_ground_shipping<ground_shipping and premium_ground_shipping<drone_shipping:
-    return print("Your cheapest option would be premium ground shipping for " + str(premium_ground_shipping) + " dollars.")
+    print("Your cheapest option would be premium ground shipping for " + str(premium_ground_shipping) + " dollars.")
+    print("Your other options are drone ship for "+str(ground_shipping)+" dollars and ground ship for "+str(ground_ship)+" dollars.")    
 #execute cheapest option string return
 best_shipping_option(ground_shipping, drone_shipping, premium_ground_shipping)
