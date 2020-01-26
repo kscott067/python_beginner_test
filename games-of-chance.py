@@ -104,7 +104,7 @@ def roulette(guess, bet):
   num = random.randint(0,37)
   #black = 2 or 4 or 6, 8 or 10 or 11 or 13 or 15 or 17 or 20 or 22 or 24 or 26 or 28 or 29 or 31 or 33 or 35
   #red = 1 or 3 or 5 or 7 or 9 or 12 or 14 or 16 or 18 or 19 or 21 or 23 or 25 or 27 or 30 or 32 or 34 or 36
-  print("The ball landed on "+str(num)+".")
+  print("You guessed " + str(guess) + " and the ball landed on "+str(num)+".")
   if guess == "Even" and (num%2) == 0 and num != 0:
     print("You guessed correctly and won "+ str(bet)+ " dollars!")
     return bet
