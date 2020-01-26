@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import random
 
 money = 100
@@ -62,10 +63,10 @@ print("""
 
 
 """)
-def pick_a_card(player1, player2, bet):
+def pick_a_card(player, opponent, bet):
   print("Let's play a game of highest card wins")
   print("-------------")
-  print(player1 + " and " + player2+ " choose to bet " + str(bet) + " dollars.")
+  print(player + " and " + opponent+ " choose to bet " + str(bet) + " dollars.")
   if bet <= 0:
     print("You must bet more than zero dollars")
     return 0
@@ -74,14 +75,14 @@ def pick_a_card(player1, player2, bet):
     return 0
   card1 = random.randint(1,10)
   card2 = random.randint(1,10)
-  print(player1+"'s card is " + str(card1) + ".")
-  print(player2+"'s card is " + str(card2) + ".")
-  print(" ")
+  print(player+"'s card is " + str(card1) + ".")
+  print(opponent+"'s card is " + str(card2) + ".")
+  print(player+"'s card is a "+str(card1)+" and "+opponent+"'s card is a"+str(card2)+".")
   if card1 > card2:
-    print(player1 + " has the higher card. " + player1 + " wins "+ str(bet) + " dollars!")
+    print(player + " has the higher card. " + player + " wins "+ str(bet) + " dollars!")
     return bet
   if card1 < card2:
-    print(player2 + " has the higher card. " + player2 + " wins "+ str(bet) + " dollars!")
+    print(opponent + " has the higher card. " + opponent + " wins "+ str(bet) + " dollars!")
     return -bet
   elif card1 == card2:
     print("Neither player has a higher card.")
